@@ -46,15 +46,18 @@ export const Navbar = () => {
             <div className="mx-6 h-6 w-px bg-white/10" />
 
             <Link
-              href="/signin"
+              href="/auth/signIn"
               className="mr-6 text-[14px] font-medium text-[#7D73FF] hover:text-[#6558FF] transition"
             >
               Sign In
             </Link>
 
-            <Button className="h-[46px] min-w-[125px] rounded-xl bg-[#6558FF] px-6 text-[14px] font-semibold text-white hover:bg-[#5246E5] transition">
+            <Link
+              href={"/auth/signUp"}
+              className="h-[46px] min-w-[125px] rounded-xl bg-[#6558FF] text-center flex items-center justify-center px-6 text-[14px] font-semibold text-white hover:bg-[#5246E5] transition"
+            >
               Get Started
-            </Button>
+            </Link>
           </div>
 
           {/* Mobile Toggle */}
@@ -82,12 +85,15 @@ export const Navbar = () => {
                 Pricing
               </Link>
               <div className="h-px bg-white/10" />
-              <Link href="/signin" className="text-[#7D73FF]">
+              <Link href="/auth/signIn" className="text-[#7D73FF]">
                 Sign In
               </Link>
-              <Button className="w-full h-[48px] bg-[#6558FF] text-white font-semibold rounded-xl">
+              <Link
+                href="/auth/signUp"
+                className="w-full h-[48px] flex items-center justify-center bg-[#6558FF] text-white font-semibold rounded-xl"
+              >
                 Get Started
-              </Button>
+              </Link>
             </div>
           </div>
         </div>
